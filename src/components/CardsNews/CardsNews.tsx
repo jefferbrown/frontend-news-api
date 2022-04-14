@@ -5,9 +5,7 @@ export interface Props {
 }
 export default function CardsNews(props: Props) {
   return (
-
     <div className="container">
-
       <div className="row row-cols-1 row-cols-md-3 g-4" id="cards">
         {props.news.map((item: any) => (
           <div className="col-4" id="num">

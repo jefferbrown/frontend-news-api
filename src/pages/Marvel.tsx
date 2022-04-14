@@ -18,7 +18,6 @@ export default function Marvel() {
 
   return (
     <div className="container">
-        
       <CardsNews news={currentPosts}/>
          <br />
       <Pagination

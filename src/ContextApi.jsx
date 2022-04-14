@@ -17,11 +17,9 @@ const ContextAll = (Components) => {
 					})
 			})
 		);
-
 		useEffect(() => {
             state.actions.getAnswer()
         }, []);
-
 		return (
 			<Context.Provider value={state}>
 				<Components {...props} />

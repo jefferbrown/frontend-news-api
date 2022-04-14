@@ -8,7 +8,6 @@ export default function Bitcoin() {
   const { store }: any = useContext(Context); 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
-
   const indexOfLastPost:number = currentPage * postsPerPage;
   const indexOfFirstPost:number = indexOfLastPost - postsPerPage;
   const currentPosts: Article[] = store.news.slice(indexOfFirstPost, indexOfLastPost);
@@ -16,7 +15,6 @@ export default function Bitcoin() {
 
   return (
     <div className="container">
-
       <CardsNews news={currentPosts}  />
       <br />
       <Pagination

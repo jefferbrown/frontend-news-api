@@ -18,11 +18,8 @@ function Home() {
   const indexOfLastPost: number = currentPage * postsPerPage;
   const indexOfFirstPost: number = indexOfLastPost - postsPerPage;
   const currentPosts: Article[] = store.news.slice(indexOfFirstPost, indexOfLastPost);
-
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
   const searchRecords = async () => {
-
     if (search.length >= 3) {
       actions.setQueries({
         search: search
@@ -32,9 +29,7 @@ function Home() {
     }
   }
   const searchRecordsDown = async () => {
-
     if (search.length < 3) {
-
       actions.setQueries({
         search: "latest"
       })

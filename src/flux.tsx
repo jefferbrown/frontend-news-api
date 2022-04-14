@@ -15,10 +15,11 @@ const getState = ({ getStore, getActions, setStore }:any) => {
             getAnswer: async () => {
                 const queries = getStore().params 
 				 await axios.get(`${url_host}/news/search`, { params:queries }).then(async({data})=>{
-					setStore({ news: data.articles });
+					setStore({ news: data.articles }).catch((err:any)=>{
+						setStore({ news: [] })
+					})
 				})
 			},
- 
 			setQueries: (newQueries:any) => {
                 setStore({ params: newQueries });
             }, 
