@@ -11,19 +11,27 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe("example to-do app", () => {
+describe("Check Buttons Names", () => {
   beforeEach(() => {
     // eslint-disable-next-line no-undef
     cy.visit("http://localhost:3000");
   });
 
-  it("Type search", () => {
+ 
+  it("Button Name Latest", () => {
     // eslint-disable-next-line no-undef
-    cy.get("#FormControlInput1").type("real madrid");
+    cy.get('#latest').contains('Newest');
   });
-
-  it("displays two todo items by default", () => {
+  it("Button Name Bitcoin", () => {
     // eslint-disable-next-line no-undef
-    cy.get("#FormControlInput1").type("real madrid");
+    cy.get('#bitcoin').contains('bitcoin');
+  });
+  it("Button Name Marvel", () => {
+    // eslint-disable-next-line no-undef
+    cy.get('#marvel').contains('Marvel');
+  });
+  it("Exists class Pagination", () => {
+    // eslint-disable-next-line no-undef
+    cy.get('.pagination').should('exist');
   });
 });

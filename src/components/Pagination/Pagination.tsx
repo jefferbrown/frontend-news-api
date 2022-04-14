@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import "./Pagination.css"; 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+ import "./Pagination.css"; 
 export interface Props {
-  postsPerPage: any;
-  totalPosts: any;
+  postsPerPage: number;
+  totalPosts: number;
   paginate: any;
 }
 export default function Pagination(props: Props) {
